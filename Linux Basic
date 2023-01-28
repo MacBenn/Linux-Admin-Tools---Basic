@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# update package list
+sudo apt-get update
+
+# upgrade installed packages
+sudo apt-get upgrade -y
+
+# install a package (in this case, the Apache web server)
+sudo apt-get install -y apache2
+
+# check the status of the Apache service
+sudo service apache2 status
+
+# create a new user
+sudo adduser newuser
+
+# add the new user to the sudo group
+sudo usermod -aG sudo newuser
+
+# set a password for the new user
+sudo passwd newuser
+
+# create a new directory
+sudo mkdir /var/www/newdirectory
+
+# change the ownership of the directory to the new user
+sudo chown newuser:newuser /var/www/newdirectory
+
+# change the permissions of the directory to allow the new user to read and write to it
+sudo chmod 755 /var/www/newdirectory
