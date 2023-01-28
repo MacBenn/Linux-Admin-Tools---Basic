@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Archiving a directory
+tar -cvf archive.tar /path/to/directory
+
+# Compressing an archive
+gzip archive.tar
+
+# Extracting an archive
+tar -xvf archive.tar.gz -C /path/to/extract/to
+
+# Creating a log file
+tar -cvf archive.tar /path/to/directory &> archive.log
+
+# Monitor the log file
+tail -f archive.log
