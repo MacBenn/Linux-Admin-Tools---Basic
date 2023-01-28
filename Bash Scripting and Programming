@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Define a variable
+name="John Doe"
+
+# Print a message
+echo "Hello, $name"
+
+# Ask for user input
+read -p "What is your age? " age
+
+# Conditional statement
+if [ $age -lt 18 ]; then
+  echo "You are not yet an adult."
+else
+  echo "You are an adult."
+fi
+
+# Loop through an array
+fruits=("apple" "banana" "cherry")
+for fruit in "${fruits[@]}"
+do
+  echo "I like $fruit"
+done
+
+# Call a function
+function greet() {
+  echo "Hello, $1"
+}
+greet "Bob"
